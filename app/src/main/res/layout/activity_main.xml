@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0EEF6"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="329dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="41dp"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Sorting-Algos Quiz App"
+        android:textAllCaps="true"
+        android:textColor="#FF0000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/startBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="254dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="170dp"
+        android:background="#87FF00"
+        android:fontFamily="sans-serif-black"
+        android:text="Start Quiz"
+        android:textAllCaps="true"
+        android:textSize="36sp"
+        android:onClick="startQuiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

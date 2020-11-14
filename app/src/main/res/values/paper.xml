@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="paper">
+        <item>Bubble sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n^2)</item>
+        <item>Insertion sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n^2)</item>
+        <item>Merge sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(nlgn)</item>
+        <item>Quick sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n^2)</item>
+        <item>Selection sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n^2)</item>
+        <item>Heap sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(nlgn)</item>
+        <item>Bogo sort has a worst-case of:</item>
+        <item>O(∞)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(∞)</item>
+        <item>Counting Sort sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n)</item>
+        <item>Bucket sort has a worst-case of:</item>
+        <item>O(lgn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(n^2)</item>
+        <item>Radix sort has a worst-case of:</item>
+        <item>O(kn)</item>
+        <item>O(n)</item>
+        <item>O(nlgn)</item>
+        <item>O(n^2)</item>
+        <item>O(kn)</item>
+    </string-array>
+</resources>
