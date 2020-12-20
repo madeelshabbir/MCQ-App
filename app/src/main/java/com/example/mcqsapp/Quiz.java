@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -18,6 +20,25 @@ public class Quiz extends AppCompatActivity {
     private ArrayList<MCQ> mcqs;
     private int result;
     ArrayList<String> data;
+    TextView timerTextView;
+    long startTime = 0;
+    Handler timerHandler = new Handler();
+    Runnable timerRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            long millis = System.currentTimeMillis() - startTime;
+            int seconds = (int) (millis / 1000);
+            seconds = seconds % 60;
+
+            timerTextView.setText(String.format("%d", 10 - seconds));
+            if(seconds == 10)
+                nextMCQ(null);
+            else
+                timerHandler.postDelayed(this, 500);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +50,7 @@ public class Quiz extends AppCompatActivity {
         Collections.shuffle(mcqs);
         showMCQ( mcqs , mcqNum);
     }
+
     private ArrayList<MCQ> arraylistToMCQ(ArrayList<String> data){
         ArrayList<MCQ> mcqs = new ArrayList<MCQ>();
         for(int i = 0; i<data.size(); i+=6)
@@ -63,6 +85,9 @@ public class Quiz extends AppCompatActivity {
     private void showMCQ( ArrayList<MCQ> mcqs , int i){
         TextView question = findViewById(R.id.questionView);
         question.setText(i+1+". "+mcqs.get(i).getQuestion());
+        startTime = System.currentTimeMillis();
+        timerHandler.postDelayed(timerRunnable, 0);
+        timerTextView = (TextView) findViewById(R.id.tmTxtView);
         RadioButton[] opt = new RadioButton[4];
         opt[0] = findViewById(R.id.opt1);
         opt[1] = findViewById(R.id.opt2);
